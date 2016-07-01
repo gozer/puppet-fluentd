@@ -5,9 +5,12 @@
 #
 class fluentd::install_repo::apt () {
 
+   $distid_downcase = inline_template('<%= os.lsb.distid.downcase %>')
+   $distcodename_downcase = inline_template('<%= os.lsb.distcodename/.downcase %>')
+
     apt::source { 'treasure-data':
-        location    => "http://packages.treasuredata.com/debian",
-        release     => "lucid",
+        location    => "http://packages.treasuredata.com/2/$distid_downcase/$distcodename_downcase/",
+        release     => $distcodename_downcase,
         repos       => "contrib",
         include_src => false,
     }
