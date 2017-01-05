@@ -8,5 +8,5 @@ class fluentd::params {
     $service_ensure = 'running'
     $service_enable = true
     $service_name = 'td-agent'
-    $yum_key_url = "http://packages.treasure-data.com/redhat/RPM-GPG-KEY-td-agent"
+    $yum_key_url = "http://packages.treasure-data.com/GPG-KEY-td-agent"
 }

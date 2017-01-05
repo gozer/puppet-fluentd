@@ -12,7 +12,7 @@ class fluentd::install_repo::yum (
     yumrepo { 'treasuredata':
         descr => 'Treasure Data',
         baseurl => 'http://packages.treasuredata.com/2/redhat/$releasever/$basearch',
-        gpgkey => 'http://packages.treasuredata.com/redhat/RPM-GPG-KEY-td-agent',
+        gpgkey => 'http://packages.treasuredata.com/GPG-KEY-td-agent',
         gpgcheck => 1,
     }
 
