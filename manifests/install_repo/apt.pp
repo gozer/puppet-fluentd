@@ -4,8 +4,8 @@
 #
 #
 class fluentd::install_repo::apt () {
-   $distid_downcase = inline_template("<%= $os['lsb']['distid'].downcase %>")
-   $distcodename_downcase = inline_template("<%= $os['lsb']['distcodename'].downcase %>")
+   $distid_downcase = inline_template("<%= @os['distro']['id'].downcase %>")
+   $distcodename_downcase = inline_template("<%= @os['distro']['codename'].downcase %>")
 
     apt::source { 'treasure-data':
         location    => "http://packages.treasuredata.com/2/$distid_downcase/$distcodename_downcase/",
