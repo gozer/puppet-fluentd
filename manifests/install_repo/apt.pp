@@ -11,7 +11,6 @@ class fluentd::install_repo::apt () {
         location    => "http://packages.treasuredata.com/2/$distid_downcase/$distcodename_downcase/",
         release     => $distcodename_downcase,
         repos       => "contrib",
-        include_src => false,
     }
 
     file { '/tmp/packages.treasure-data.com.key':
