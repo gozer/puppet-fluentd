@@ -8,7 +8,7 @@ class fluentd::install_repo::apt () {
    $distcodename_downcase = inline_template("<%= @os['distro']['codename'].downcase %>")
 
     apt::source { 'treasure-data':
-        location    => "http://packages.treasuredata.com/2/$distid_downcase/$distcodename_downcase/",
+        location    => "http://packages.treasuredata.com/3/$distid_downcase/$distcodename_downcase/",
         release     => $distcodename_downcase,
         repos       => "contrib",
     }
