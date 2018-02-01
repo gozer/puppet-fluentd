@@ -1,5 +1,5 @@
 <match <%= @pattern %>>
-  type <%= @type %>
+  @type <%= @type %>
 <% @config.sort_by{|key,val|key}.each do |key, val| -%>
   <% if val.class == Hash && key == 'template' %> 
     <template>
